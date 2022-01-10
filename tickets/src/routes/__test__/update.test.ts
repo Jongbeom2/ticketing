@@ -121,5 +121,5 @@ it("rejects updates if the ticket is reserved", async () => {
     .put(`/api/tickets/${response.body.id}`)
     .set("Cookie", cookie)
     .send({ title, price })
-    .expect(100);
+    .expect(400);
 });
